@@ -100,7 +100,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (2,'JohnyTest','Jon','Testerman','132 Debugger Dr','Cincinnati','OH',45200,'513-555-7895','Tester@testing.com','test123',0),(3,'MikeUser','Mike','Userson','123 Drive','Cincinnati','OH',45200,'555-555-5555','test@testing.com','using',0),(4,'JefferyB','Jeff','BB','','','',0,'','test@testing.com','using',0),(5,'Someone','Guy','bleh','','','',0,'','test@testing.com','using',0);
+INSERT INTO `user` VALUES (2,'JohnyTest','Jon','Testerman','132 Debugger Dr','Cincinnati','OH',45200,'513-555-7895','Tester@testing.com','test123',0),(3,'MikeUserson','Mike','Userson','123 Drive','Cincinnati','OH',45200,'555-555-5555','test@testing.com','using',0),(4,'JefferyB','Jeff','BB','','','',0,'','test@testing.com','using',0),(5,'Someone','Guy','bleh','','','',0,'','test@testing.com','using',0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,17 +138,17 @@ DROP TABLE IF EXISTS `workrequests`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `workrequests` (
-  `RequestId` int(11) NOT NULL AUTO_INCREMENT,
-  `Description` varchar(500) DEFAULT NULL,
-  `user_UserID` int(11) NOT NULL,
-  `Skills_SkillsId` int(11) NOT NULL,
-  `Date` date DEFAULT NULL,
-  PRIMARY KEY (`RequestId`,`user_UserID`,`Skills_SkillsId`),
-  KEY `fk_WorkRequests_user_idx` (`user_UserID`),
-  KEY `fk_WorkRequests_Skills1_idx` (`Skills_SkillsId`),
-  CONSTRAINT `fk_WorkRequests_Skills1` FOREIGN KEY (`Skills_SkillsId`) REFERENCES `skills` (`SkillsId`),
-  CONSTRAINT `fk_WorkRequests_user` FOREIGN KEY (`user_UserID`) REFERENCES `user` (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `RequestID` int(11) NOT NULL AUTO_INCREMENT,
+  `Description` varchar(1000) DEFAULT NULL,
+  `UserID` int(11) NOT NULL,
+  `WizardID` int(11) DEFAULT NULL,
+  `OpenDate` datetime DEFAULT NULL,
+  `AcceptDate` datetime DEFAULT NULL,
+  `CompleteDate` datetime DEFAULT NULL,
+  `SupportType` varchar(45) DEFAULT NULL,
+  `Status` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`RequestID`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,6 +157,7 @@ CREATE TABLE `workrequests` (
 
 LOCK TABLES `workrequests` WRITE;
 /*!40000 ALTER TABLE `workrequests` DISABLE KEYS */;
+INSERT INTO `workrequests` VALUES (3,'I need some for real stuff done',1,3,'2020-02-09 14:47:32','2020-02-09 14:47:32','2020-02-09 14:47:32','With the power of awesome',0),(4,'I need some serios Help',1,3,'2020-02-09 14:47:32','2020-02-09 14:47:32','2020-02-09 14:47:32','With the power of awesome',1),(5,'I am beyond help',1,3,'2020-02-09 14:47:32','2020-02-09 14:47:32','2020-02-09 14:47:32','Rum',1),(6,'Your Mom',1,3,'2020-02-09 14:47:32','2020-02-09 14:47:32','2020-02-09 14:47:32','Whiskey',1);
 /*!40000 ALTER TABLE `workrequests` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -169,4 +170,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-03 13:42:41
+-- Dump completed on 2020-02-10  1:27:45
