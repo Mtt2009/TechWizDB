@@ -1,0 +1,3 @@
+UserID,UserName,FirstName,LastName,Address,City,State,Zip,Phone,Email,Password,isWizard
+2,matthew.miracle@gmail.com,Matthew,Miracle,"1320 Grace Ave",Cincinnati,OH,45208,5135555555,matthew.miracle@gmail.com,password,1
+3,mitch.morton09@gmail.com,Mitch,Morton,"1418 West Fork Rd",Murray,KY,42071,12707536363,mitch.morton09@gmail.com,wordpass,0
