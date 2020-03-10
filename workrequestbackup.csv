@@ -1,0 +1,6 @@
+"RequestId";"Description";"user_UserID";"Skills_SkillsId";"CreatedDate";"AcceptedDate";"CompletedDate";"user_WizardID";"price_in_cents";"title";"ContactMethodID"
+1;"My computer has been booting very slowly and I just want my life back!";3;1;"0001-01-01";"";"";0;5000;"Slow computer";2
+2;"My blasted grandchildren set my autocorrect to type ""yolo"" whenever I type ""last will and testament"" and the family attorney is becoming increasingly concerned about my soundness of mind.  Help!";3;4;"2020-03-07";"";"";0;2500;"The grandkids are at it again";4
+3;"Somewhere in the mix my new samsung tv stopped connecting to my internet and I need to watch my PureFlix stories.";3;6;"2020-03-07";"";"";0;3000;"Smart tv is a smart-alek";4
+4;"No, really, this computer is fullll of bugs.  Actual living creatures";3;6;"2020-03-07";"";"";0;2500;"Bug in my machine";4
+5;"I 've recited the incantations and drawn the summoning circles, yet my technical skill remains merely ""excellent"" rather than ""extraordinary."" Any tips from a wiser wizard on ascending to the next plane of computerknowledge?";2;5;"2020-03-08";"";"";0;1500;"Becoming a more powerful wizard";3
